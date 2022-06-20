@@ -8,10 +8,8 @@ export default function Profile () {
   const currentUser = useSelector(selectCurrentUser)
   const loggedIn = useSelector(selectIsLoggedIn);
 
-  // call useRouteMatch() to get the url and path
   let {url, path} = useRouteMatch();
 
-  // use loggedIn to return a Redirect
   if (!loggedIn) {
     return <Redirect to="/sign-up/"/>
   }
